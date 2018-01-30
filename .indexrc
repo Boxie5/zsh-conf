@@ -1,0 +1,11 @@
+#!/bin/bash
+
+source $HOME/.aliases
+source $HOME/.color
+source $HOME/.git_profiles
+source $HOME/.gitconfig
+source $HOME/.personal
+source $HOME/.qiniurc
+source $HOME/.random_note
+source $HOME/.tools
+

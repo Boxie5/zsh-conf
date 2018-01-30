@@ -1,0 +1,25 @@
+#!/bin/bash
+
+notes=(
+"use alias tat => 'tmux attach -t'"
+"use colorful echo =>echo -e '${Red}NOTE: ${NC}check ${Blue}git'"
+"use k8s shortcut kgj => kubectl get jobs"
+"useful tools: cut, paste, split"
+"use grep to search certain lines and get the amount => grep -c hello test"
+"use grep to search files that contain select lines => grep -l hello ./*"
+"use peco to filter output interactively => cat hello | peco"
+"use pwgen to generate random password => pwgen -s 14 8 (generate 8 passwords with length of 14)"
+"use gpw to generate random user name => gpw 8 15 (generate 8 user names with length of 16)"
+"use awk to print lines in middle of file => awk 'FNR>=20 && FNR<=40' file_name"
+"use 'curl ifconfig.me' to show your internet ip"
+"use 'git recent' to show latest commits on local branchs"
+"use extract to uncompression all kinds of compression files"
+"use 'more /etc/*-release' to show unix OS info"
+"use 'tput cols' to show current cols and 'tput lines' to show current rows"
+"use 'echo $LINES:$COLUMNS' to show current terminal size"
+"use `echo -e 'lines\ncols'|tput -S` to show rows and cols at the same time"
+)
+
+count=${#notes[@]}
+random=$((RANDOM%$count + 1))
+echo -e "${Orange}Tips: ${NC}${notes[$random]}"

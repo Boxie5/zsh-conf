@@ -1,0 +1,66 @@
+alias c=clear
+alias cl=clear
+alias cler=clear
+alias clar=clear
+alias clera=clear
+alias claer=clear
+alias ckear=clear
+alias f=fuck
+
+alias virtual='virtualenv ENV && source ENV/bin/activate && pip install --upgrade pip'
+
+alias gti=git
+alias igt=git
+alias grv='git remote -v'
+alias gst='git status'
+alias gru='git remote update'
+#alias gdadd='git diff ./ | grep -c "^+"'
+#alias gdplus='git diff ./ | grep -c "^-"'
+alias gblur='gst | grep "/" | grep -v "git add" | sed "s/\(modified:\)//g" | awk "{print $1}"'
+
+alias cd7='cd Documents/qiniu/repos'
+
+alias tat='tmux attach -t'
+alias tnt='tmux new -t'
+
+# alias for ava portal build
+
+alias apbuild='fec-builder'
+
+gdadd() {
+  name=$1
+  diff_path=$2
+  if [ -z $name ]; then
+    name=HEAD
+  fi
+
+  if [ -z $diff_path ]; then
+    diff_path=./
+  fi
+
+  git diff ${name} ${diff_path} | grep -c '^+'
+}
+
+gdplus() {
+  name=$1
+  diff_path=$2
+  if [ -z $name ]; then
+    name=HEAD
+  fi
+
+  if [ -z $diff_path ]; then
+    diff_path=./
+  fi
+
+  git diff ${name} ${diff_path} | grep -c '^-'
+}
+
+gi() {
+  curl -L -s https://www.gitignore.io/api/$1
+}
+
+drmd() {
+  docker ps -a | grep Exited | awk '{print $1}' | xargs -n 1 docker rm
+}
+
+

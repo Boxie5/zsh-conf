@@ -1,0 +1,18 @@
+#! /bin/bash
+
+export ENVIRONMENT=local
+export HISTTIMEFORMAT="%d/%m/%y %T "
+
+# github.com
+# export GITHUB_USER=
+# export GITHUB_PWD=
+
+# ok.sh
+export OK_SH_URL=https://api.github.com
+export OK_SH_ACCEPT=application/vnd.github.v3+json
+export OK_SH_JQ_BIN=jq
+export OK_SH_VERBOSE=0
+export OK_SH_RATE_LIMIT=0
+export OK_SH_DESTRUCTIVE=0
+export OK_SH_MARKDOWN=1
+

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+export MY_AK=
+export MY_SK=
+
+export AVA_TEST_AK=
+export AVA_TEST_SK=
+
