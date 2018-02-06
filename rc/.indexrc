@@ -1,11 +1,9 @@
 #!/bin/bash
 
-ZSH_CONF=$HOME/zsh-conf
+ZSH_CONF=$HOME/zsh-conf/rc
 
 source $ZSH_CONF/.aliases
 source $ZSH_CONF/.color
-source $ZSH_CONF/.git_profiles
-source $ZSH_CONF/.gitconfig
 source $ZSH_CONF/.personal
 source $ZSH_CONF/.qiniurc
 source $ZSH_CONF/.random_note
